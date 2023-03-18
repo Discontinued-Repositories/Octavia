@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Types/SlashCommandType.ts"],
+  "sourcesContent": ["import {\n  ChatInputApplicationCommandData,\n  GuildMember,\n  ChatInputCommandInteraction,\n  PermissionResolvable,\n  CommandInteractionOptionResolver,\n} from \"discord.js\";\nimport { ExtendedClient } from \"../Client\";\n\nexport interface ExtendedInteraction extends ChatInputCommandInteraction {\n  member: GuildMember;\n}\n\ninterface runChatInput {\n  client: ExtendedClient;\n  interaction: ExtendedInteraction;\n  args: CommandInteractionOptionResolver;\n}\n\ntype Run = (options: runChatInput) => any;\n\nexport type SlashCommandType = {\n  directory?: string\n  /** Command configuration */\n  config?: {\n    /** Developer Command */\n    developer?: boolean\n    /** NSFW channel only command */\n    nsfw?: boolean\n    /** Server owner only command */\n    owner?: boolean\n  }\n  /** Command permissions */\n  permissions?: {\n    /** Required user permissions */\n    user?: PermissionResolvable[]\n    /** Me required permissions */\n    me?: PermissionResolvable[]\n  }\n  /** Running the command */\n  run: Run\n} & ChatInputApplicationCommandData"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Classes/Command.ts"],
+  "sourcesContent": ["import { CommandType } from \"../Types/CommandType\"\n\nexport class CommandBuilder {\n  constructor(options: CommandType) {\n    Object.assign(this, options)\n  }\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAEO,qBAAqB;AAAA,EAC1B,YAAY,SAAsB;AAChC,WAAO,OAAO,MAAM;AAAA;AAAA;",
+  "names": []
+}

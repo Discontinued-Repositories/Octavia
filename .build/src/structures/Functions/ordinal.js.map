@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Functions/ordinal.ts"],
+  "sourcesContent": ["export function ordinal(number: number) {\n  const string = {\n    1: \"st\",\n    2: \"nd\",\n    3: \"rd\",\n  }\n  return `${number}${string[number % 10] ? string[number % 10] : \"th\"}`\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,iBAAiB,QAAgB;AACtC,QAAM,SAAS;AAAA,IACb,GAAG;AAAA,IACH,GAAG;AAAA,IACH,GAAG;AAAA;AAEL,SAAO,GAAG,SAAS,OAAO,SAAS,MAAM,OAAO,SAAS,MAAM;AAAA;",
+  "names": []
+}

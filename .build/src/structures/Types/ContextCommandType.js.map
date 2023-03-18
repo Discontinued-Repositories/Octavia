@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Types/ContextCommandType.ts"],
+  "sourcesContent": ["import { ContextMenuCommandInteraction, ApplicationCommandData } from \"discord.js\";\nimport { ExtendedClient } from \"../Client\";\n\ninterface runOptions {\n  client: ExtendedClient;\n  interaction: ContextMenuCommandInteraction\n}\n\ntype Run = (options: runOptions) => any\n\nexport type ContextCommandType = {\n  directory?: string\n  /** Command configuration */\n  config?: {\n    /** Developer Command */\n    developer?: boolean\n    /** NSFW channel only command */\n    nsfw?: boolean\n    /** Server owner only command */\n    owner?: boolean\n  }\n  /** Running the command */\n  run: Run\n} & ApplicationCommandData"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Functions/progressBar.ts"],
+  "sourcesContent": ["export function progressBar(\n  /** Current Progress */\n  currentProgress: number,\n  /** The Max Progress */\n  maxProgress: number,\n  /** Size Of The Progress Bar */\n  size: number\n) {\n  let barArray = [];\n\n  let fill = Math.round(\n    size * (currentProgress / maxProgress > 1 ? 1 : currentProgress / maxProgress)\n  );\n  let empty = size - fill > 0 ? size - fill : 0;\n\n  for (let i = 1; i <= fill; i++) barArray.push(\"\u25B0\");\n  for (let i = 1; i <= empty; i++) barArray.push(\"\u25B1\");\n\n  barArray[0] = barArray[0] == \"\u25B0\" ? \"\u25B0\" : \"\u25B1\";\n  barArray[barArray.length - 1] =\n    barArray[barArray.length - 1] == \"\u25B0\" ? \"\u25B0\" : \"\u25B1\";\n\n  return barArray.join(\"\");\n}\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,qBAEL,iBAEA,aAEA,MACA;AACA,MAAI,WAAW;AAEf,MAAI,OAAO,KAAK,MACd,OAAQ,mBAAkB,cAAc,IAAI,IAAI,kBAAkB;AAEpE,MAAI,QAAQ,OAAO,OAAO,IAAI,OAAO,OAAO;AAE5C,WAAS,IAAI,GAAG,KAAK,MAAM;AAAK,aAAS,KAAK;AAC9C,WAAS,IAAI,GAAG,KAAK,OAAO;AAAK,aAAS,KAAK;AAE/C,WAAS,KAAK,SAAS,MAAM,WAAM,WAAM;AACzC,WAAS,SAAS,SAAS,KACzB,SAAS,SAAS,SAAS,MAAM,WAAM,WAAM;AAE/C,SAAO,SAAS,KAAK;AAAA;",
+  "names": []
+}

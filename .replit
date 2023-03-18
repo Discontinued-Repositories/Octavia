@@ -1,4 +1,7 @@
 run = "npm run start"
+entrypoint = "index.ts"
+hidden = [".build", ".config"]
+compile = "./.config/build.sh"
 
 [languages.typescript]
 pattern = "**/{*.ts,*.js,*.tsx,*.jsx}"

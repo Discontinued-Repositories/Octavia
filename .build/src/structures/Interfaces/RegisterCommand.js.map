@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/structures/Interfaces/RegisterCommand.ts"],
+  "sourcesContent": ["import { ApplicationCommandDataResolvable } from \"discord.js\";\n\nexport interface RegisterCommands {\n  commands: ApplicationCommandDataResolvable[]\n  guild?: string\n}"],
+  "mappings": ";;AAAA;",
+  "names": []
+}
