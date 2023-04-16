@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/structures/Classes/ContextCommand.ts"],
-  "sourcesContent": ["import { ContextCommandType } from \"../Types/ContextCommandType\"\n\nexport class ContextCommandBuilder {\n  constructor(options: ContextCommandType) {\n    Object.assign(this, options)\n  }\n}"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAEO,4BAA4B;AAAA,EACjC,YAAY,SAA6B;AACvC,WAAO,OAAO,MAAM;AAAA;AAAA;",
-  "names": []
-}

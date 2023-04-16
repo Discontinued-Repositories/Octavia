@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/structures/Classes/SlashCommand.ts"],
-  "sourcesContent": ["import { SlashCommandType } from \"../Types/SlashCommandType\"\n\nexport class SlashCommandBuilder {\n  constructor(options: SlashCommandType) {\n    Object.assign(this, options)\n  }\n}"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAEO,0BAA0B;AAAA,EAC/B,YAAY,SAA2B;AACrC,WAAO,OAAO,MAAM;AAAA;AAAA;",
-  "names": []
-}

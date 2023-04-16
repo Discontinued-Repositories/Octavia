@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/index.ts"],
-  "sourcesContent": ["import { Noelly } from \"./structures/Client\";\nexport const client = new Noelly();\nclient.start();"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAAuB;AAChB,MAAM,SAAS,IAAI;AAC1B,OAAO;",
-  "names": []
-}

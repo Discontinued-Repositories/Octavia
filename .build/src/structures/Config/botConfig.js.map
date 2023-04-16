@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/structures/Config/botConfig.ts"],
-  "sourcesContent": ["export const botConfig = {\n  token: process.env.TOKEN, // Bot Token\n  prefix: \"!\", // Bot prefix\n}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,MAAM,YAAY;AAAA,EACvB,OAAO,QAAQ,IAAI;AAAA,EACnB,QAAQ;AAAA;",
-  "names": []
-}

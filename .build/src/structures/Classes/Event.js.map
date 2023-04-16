@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/structures/Classes/Event.ts"],
-  "sourcesContent": ["import { ClientEvents } from \"discord.js\";\nimport { Noelly } from \"../Client\";\n\ninterface EventOptions<Key extends keyof ClientEvents> { name: Key, once?: boolean, run: (client: Noelly, ...args: ClientEvents[Key]) => any }\n\nexport class Event<Key extends keyof ClientEvents> {\n  constructor(public options: EventOptions<Key>) {}\n}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAKO,YAA4C;AAAA,EACjD,YAAmB,SAA4B;AAA5B;AAAA;AAAA;",
-  "names": []
-}

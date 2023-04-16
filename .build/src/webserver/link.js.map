@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/webserver/link.ts"],
-  "sourcesContent": ["/* Nem precisa disso botei por botar */\nimport \"./connection.ts\";"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AACA,wBAAO;",
-  "names": []
-}
