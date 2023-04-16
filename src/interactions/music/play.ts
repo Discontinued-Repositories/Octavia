@@ -24,7 +24,7 @@ export default new SlashCommandBuilder({
       const currentChannel = member?.voice?.channelId;
       if (!currentChannel) {
         return interaction.reply({
-          content: '**☝️ You need to be in a voice channel to use this command**',
+          content: 'Você não está em um canal de voz.',
           ephemeral: true
         });
       }
