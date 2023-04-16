@@ -1,6 +1,6 @@
 import mongoose, { ConnectOptions } from "mongoose";
 import chalk from 'chalk';
-import { newClient } from "../Client";
+import { Noelly } from "../Client";
 
 mongoose.set("strictQuery", true);
 
@@ -10,9 +10,9 @@ interface MongooseConnectOptions extends ConnectOptions {
 }
 
 export class Database {
-  private client: newClient;
+  private client: Noelly;
 
-  constructor(client: newClient) {
+  constructor(client: Noelly) {
     this.client = client;
   }
 
@@ -23,7 +23,7 @@ export class Database {
         useUnifiedTopology: true,
       };
 
-      await mongoose.connect(process.env.MONGODB, mongooseOptions);
+      await mongoose.connect(process.env.MONGO_URL, mongooseOptions);
 
       console.log(chalk.white.bold("━━━━━━━━━━━━━━━━━━━━━[ Database ]"))
       console.log(`${chalk.whiteBright.bold(`[ ${chalk.blueBright.bold("Mongoose")} ]`)} Status: ${chalk.greenBright.bold("loaded")}`)

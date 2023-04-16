@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/interactions/Bot/ping.ts"],
-  "sourcesContent": ["import { SlashCommandBuilder } from \"../../structures/Classes/SlashCommand\";\nimport { EmbedBuilder } from \"discord.js\";\n\nexport default new SlashCommandBuilder({\n  name: \"ping\",\n  description: \"Bot Latency Ping.\",\n  run({ client, interaction }) {\n    return interaction.reply({ content: \"\" })\n  },\n})"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAoC;AAGpC,IAAO,eAAQ,IAAI,wCAAoB;AAAA,EACrC,MAAM;AAAA,EACN,aAAa;AAAA,EACb,IAAI,EAAE,QAAQ,eAAe;AAC3B,WAAO,YAAY,MAAM,EAAE,SAAS;AAAA;AAAA;",
-  "names": []
-}

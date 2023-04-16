@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/commands/Bot/ping.ts"],
-  "sourcesContent": ["import { CommandBuilder } from \"../../structures/Classes/Command\";\nimport { EmbedBuilder } from \"discord.js\";\n\nexport default new CommandBuilder({\n  name: \"ping\",\n  description: \"Shows Bot Latency Ping\",\n  run({ client, message }) {\n    message.reply({ content: \"slacaralho\", })\n  },\n})"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA+B;AAG/B,IAAO,eAAQ,IAAI,8BAAe;AAAA,EAChC,MAAM;AAAA,EACN,aAAa;AAAA,EACb,IAAI,EAAE,QAAQ,WAAW;AACvB,YAAQ,MAAM,EAAE,SAAS;AAAA;AAAA;",
-  "names": []
-}

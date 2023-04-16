@@ -1,3 +1,3 @@
-import { newClient } from "./structures/Client";
-export const client = new newClient();
+import { Noelly } from "./structures/Client";
+export const client = new Noelly();
 client.start();

@@ -5,18 +5,21 @@ import { RegisterCommands } from "./Interfaces/RegisterCommand";
 import { CommandType } from "./Types/CommandType";
 import { SlashCommandType } from "./Types/SlashCommandType";
 import { ContextCommandType } from "./Types/ContextCommandType";
-
 import { glob } from "glob";
 import chalk from "chalk";
 import { promisify } from "util";
 import { Event } from "./Classes/Event";
-import { Database } from "./Database/index"
+import { Database } from "./Database/index";
+import { Vulkava } from "vulkava";
+import { Manager } from "./Music/NoellyLavalink";
+import { Nodes } from "./Music/Nodes"
 let globPromise = promisify(glob)
 
-export class newClient extends Client {
+export class Noelly extends Client {
   commands: Collection<string, CommandType> = new Collection();
   aliases: Collection<string, string> = new Collection()
   slashCommands: Collection<string, SlashCommandType | ContextCommandType> = new Collection();
+  manager: Manager;
   config = botConfig;
 
   constructor() {
@@ -28,8 +31,10 @@ export class newClient extends Client {
         "GuildPresences",
         "Guilds",
         "MessageContent",
+        "GuildVoiceStates"
       ],
     });
+    this.manager = new Manager(this, Nodes);
   }
 
   async start() {

@@ -39,7 +39,7 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 __export(exports, {
-  newClient: () => newClient
+  Noelly: () => Noelly
 });
 var import_discord = __toModule(require("discord.js"));
 var import_botConfig = __toModule(require("./Config/botConfig"));
@@ -48,11 +48,14 @@ var import_glob = __toModule(require("glob"));
 var import_chalk = __toModule(require("chalk"));
 var import_util = __toModule(require("util"));
 var import_Database = __toModule(require("./Database/index"));
+var import_NoellyLavalink = __toModule(require("./Music/NoellyLavalink"));
+var import_Nodes = __toModule(require("./Music/Nodes"));
 let globPromise = (0, import_util.promisify)(import_glob.glob);
-class newClient extends import_discord.Client {
+class Noelly extends import_discord.Client {
   commands = new import_discord.Collection();
   aliases = new import_discord.Collection();
   slashCommands = new import_discord.Collection();
+  manager;
   config = import_botConfig.botConfig;
   constructor() {
     super({
@@ -62,9 +65,11 @@ class newClient extends import_discord.Client {
         "GuildMessages",
         "GuildPresences",
         "Guilds",
-        "MessageContent"
+        "MessageContent",
+        "GuildVoiceStates"
       ]
     });
+    this.manager = new import_NoellyLavalink.Manager(this, import_Nodes.Nodes);
   }
   async start() {
     console.clear();
@@ -153,6 +158,6 @@ class newClient extends import_discord.Client {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  newClient
+  Noelly
 });
 //# sourceMappingURL=Client.js.map

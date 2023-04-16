@@ -25,7 +25,7 @@ __export(exports, {
   client: () => client
 });
 var import_Client = __toModule(require("./structures/Client"));
-const client = new import_Client.newClient();
+const client = new import_Client.Noelly();
 client.start();
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

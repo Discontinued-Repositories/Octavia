@@ -38,7 +38,7 @@ class Database {
         useNewUrlParser: true,
         useUnifiedTopology: true
       };
-      await import_mongoose.default.connect(process.env.MONGODB, mongooseOptions);
+      await import_mongoose.default.connect(process.env.MONGO_URL, mongooseOptions);
       console.log(import_chalk.default.white.bold("\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501[ Database ]"));
       console.log(`${import_chalk.default.whiteBright.bold(`[ ${import_chalk.default.blueBright.bold("Mongoose")} ]`)} Status: ${import_chalk.default.greenBright.bold("loaded")}`);
     } catch (err) {

@@ -1,8 +1,8 @@
 import { ContextMenuCommandInteraction, ApplicationCommandData } from "discord.js";
-import { ExtendedClient } from "../Client";
+import { Noelly } from "../Client";
 
 interface runOptions {
-  client: ExtendedClient;
+  client: Noelly;
   interaction: ContextMenuCommandInteraction
 }
 

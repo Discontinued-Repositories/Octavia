@@ -5,14 +5,14 @@ import {
   PermissionResolvable,
   CommandInteractionOptionResolver,
 } from "discord.js";
-import { ExtendedClient } from "../Client";
+import { Noelly } from "../Client";
 
 export interface ExtendedInteraction extends ChatInputCommandInteraction {
   member: GuildMember;
 }
 
 interface runChatInput {
-  client: ExtendedClient;
+  client: Noelly;
   interaction: ExtendedInteraction;
   args: CommandInteractionOptionResolver;
 }

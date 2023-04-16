@@ -1,8 +1,8 @@
-import { ExtendedClient } from "../Client";
+import { Noelly } from "../Client";
 import { Message, PermissionResolvable } from "discord.js";
 
 interface runOptions {
-  client: ExtendedClient
+  client: Noelly
   message: Message
   args: string[]
 }
