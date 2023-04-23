@@ -5,6 +5,7 @@ import { Event } from "./Event";
 import { client } from "..";
 import { CommandType } from './Command';
 import { Logger } from "./Logger";
+import { Database } from "../../database/index";
 const globPromise = promisify(glob);
 
 export class Octavia extends DiscordClient {
@@ -53,6 +54,8 @@ export class Octavia extends DiscordClient {
   }
 
   async start() {
+    const database = new Database(this);
+    await database.start();
     this.registerModules();
     await this.login(process.env.BOT_TOKEN);
   }

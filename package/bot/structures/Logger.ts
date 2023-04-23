@@ -7,6 +7,10 @@ export class Logger {
     console.log(`${chalk.grey.bold("[")} ${chalk.blue("READY")} ${chalk.grey.bold("]")}`, content)
   }
 
+  public database(content: string) {
+    console.log(`${chalk.grey.bold("[")} ${chalk.blue("DATABASE")} ${chalk.grey.bold("]")}`, content)
+  }
+
   public info(content: string) {
     console.log(`${chalk.blue('info')} -`, content)
   }
